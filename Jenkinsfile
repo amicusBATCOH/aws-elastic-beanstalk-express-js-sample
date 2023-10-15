@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'dind'
+            image 'docker:dind'
+			args '--insecure-registry dind:2376'
         }
     }
     
